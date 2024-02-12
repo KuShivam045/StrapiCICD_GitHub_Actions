@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_cards_cards",
+  "info": {
+    "displayName": "card",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "cardHeading": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.heading"
+    },
+    "cardDescription": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.description"
+    },
+    "cardCta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "feature-box.feature-box"
+    }
+  }
+}

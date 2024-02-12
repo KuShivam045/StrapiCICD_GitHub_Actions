@@ -4,7 +4,7 @@ Strapi comes with a full featured [Command Line Interface](https://docs.strapi.i
 
 ### `develop`
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+Start Your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
 
 ```
 npm run develop
@@ -12,14 +12,14 @@ npm run develop
 yarn develop
 ```
 
-### `start`
+### `Start`
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+Start your strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#Strapi-start)
 
 ```
 npm run start
 # or
-yarn start
+yarn Start
 ```
 
 ### `build`
@@ -34,7 +34,7 @@ yarn build
 
 ## ⚙️ Deployment
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse [Deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
 
 ## 📚 Learn more
 

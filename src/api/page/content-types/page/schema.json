@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "dynamiczone",
+      "components": [
+        "content.heading",
+        "content.sub-heading",
+        "content.description",
+        "feature-box.feature-box",
+        "feature-box.image"
+      ]
+    },
+    "heroCards": {
+      "type": "dynamiczone",
+      "components": [
+        "cards.card"
+      ]
+    },
+    "New_Component": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cards.card"
+    }
+  }
+}

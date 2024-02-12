@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = ({ env }) => {
-  const client = env('DATABASE_CLIENT', 'sqlite');
+  const client = env('DATABASE_CLIENT', 'mysql2');
 
   const connections = {
     mysql: {
@@ -28,11 +28,11 @@ module.exports = ({ env }) => {
     },
     mysql2: {
       connection: {
-        host: env('DATABASE_HOST', 'localhost'),
+        host: env('DATABASE_HOST', 'rzmainaurdb1-instance-1.cjsfkub9evd3.ap-south-1.rds.amazonaws.com'),
         port: env.int('DATABASE_PORT', 3306),
         database: env('DATABASE_NAME', 'strapi'),
-        user: env('DATABASE_USERNAME', 'strapi'),
-        password: env('DATABASE_PASSWORD', 'strapi'),
+        user: env('DATABASE_USERNAME', 'rzadmin'),
+        password: env('DATABASE_PASSWORD', 'TeLzeFVs4M7u77hgHLbJRMmpNwh7PLMLPFPys7MT'),
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
