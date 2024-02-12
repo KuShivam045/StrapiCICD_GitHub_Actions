@@ -28,8 +28,8 @@ jobs:
     - run: |
         touch .env
         echo "${{secrets.PROD_ENV_FILE}}" > .env
-    - run: npm run develop
-    # - run: npm run build
-    # - run: pm2 restart 12
+    # - run: npm run develop
+    - run: npm run build
+    - run: pm2 restart 10
 
     
