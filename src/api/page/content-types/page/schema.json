@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "heroCards": {
-      "type": "dynamiczone",
-      "components": [
-        "cards.card"
-      ]
-    },
     "heroSection": {
       "type": "component",
       "repeatable": true,
@@ -43,7 +37,7 @@
       "repeatable": false,
       "component": "section.our-values"
     },
-    "newHeroCards": {
+    "heroCards": {
       "type": "component",
       "repeatable": true,
       "component": "cards.hero-card"

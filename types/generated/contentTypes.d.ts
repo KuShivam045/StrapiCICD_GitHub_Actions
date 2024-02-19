@@ -817,13 +817,12 @@ export interface ApiPagePage extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    heroCards: Attribute.DynamicZone<['cards.card']>;
     heroSection: Attribute.Component<'section.hero-section', true>;
     whoAreWe: Attribute.Component<'section.who-are-we'>;
     Industries: Attribute.Component<'section.industries'>;
     joinOurTeam: Attribute.Component<'section.join-our-team'>;
     ourValues: Attribute.Component<'section.our-values'>;
-    newHeroCards: Attribute.Component<'cards.hero-card', true>;
+    heroCards: Attribute.Component<'cards.hero-card', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
