@@ -376,12 +376,37 @@ export interface ApiPagePage extends Schema.CollectionType {
   attributes: {
     heroCards: Attribute.DynamicZone<['cards.card']>;
     heroSection: Attribute.Component<'section.hero-section', true>;
+    whoAreWe: Attribute.Component<'section.who-are-we'>;
+    Industries: Attribute.Component<'section.industries'>;
+    industriesCards: Attribute.Component<'cards.card', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiXxxXxx extends Schema.SingleType {
+  collectionName: 'xxxes';
+  info: {
+    singularName: 'xxx';
+    pluralName: 'xxxes';
+    displayName: 'xxx';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    label: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::xxx.xxx', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::xxx.xxx', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -816,6 +841,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::page.page': ApiPagePage;
+      'api::xxx.xxx': ApiXxxXxx;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;

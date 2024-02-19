@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_section_industries",
+  "info": {
+    "displayName": "Industries",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "subHeading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -41,6 +41,19 @@ export interface ContentHeading extends Schema.Component {
   };
 }
 
+export interface ContentOurValuesPoints extends Schema.Component {
+  collectionName: 'components_content_our_values_points';
+  info: {
+    displayName: 'ourValuesPoints';
+    icon: 'filter';
+  };
+  attributes: {
+    heading: Attribute.Text;
+    subHeading: Attribute.Text;
+    ourValuesIcons: Attribute.Media;
+  };
+}
+
 export interface ContentSubHeading extends Schema.Component {
   collectionName: 'components_content_sub_headings';
   info: {
@@ -91,16 +104,60 @@ export interface SectionHeroSection extends Schema.Component {
   };
 }
 
+export interface SectionIndustries extends Schema.Component {
+  collectionName: 'components_section_industries';
+  info: {
+    displayName: 'Industries';
+    icon: 'briefcase';
+  };
+  attributes: {
+    heading: Attribute.Text;
+    subHeading: Attribute.Text;
+    description: Attribute.Text;
+  };
+}
+
+export interface SectionOurValues extends Schema.Component {
+  collectionName: 'components_section_our_values';
+  info: {
+    displayName: 'ourValues';
+    icon: 'crown';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.Text;
+    ourValuesPoints: Attribute.Component<'content.our-values-points', true>;
+    cta: Attribute.Text;
+  };
+}
+
+export interface SectionWhoAreWe extends Schema.Component {
+  collectionName: 'components_section_who_are_wes';
+  info: {
+    displayName: 'whoAreWe';
+    icon: 'book';
+  };
+  attributes: {
+    heading: Attribute.Text;
+    subHeading: Attribute.Text;
+    description: Attribute.Text;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'cards.card': CardsCard;
       'content.description': ContentDescription;
       'content.heading': ContentHeading;
+      'content.our-values-points': ContentOurValuesPoints;
       'content.sub-heading': ContentSubHeading;
       'feature-box.feature-box': FeatureBoxFeatureBox;
       'feature-box.image': FeatureBoxImage;
       'section.hero-section': SectionHeroSection;
+      'section.industries': SectionIndustries;
+      'section.our-values': SectionOurValues;
+      'section.who-are-we': SectionWhoAreWe;
     }
   }
 }

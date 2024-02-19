@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_content_our_values_points",
+  "info": {
+    "displayName": "ourValuesPoints",
+    "icon": "filter"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "subHeading": {
+      "type": "text"
+    },
+    "ourValuesIcons": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

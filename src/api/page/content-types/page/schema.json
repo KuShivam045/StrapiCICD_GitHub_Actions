@@ -22,6 +22,21 @@
       "type": "component",
       "repeatable": true,
       "component": "section.hero-section"
+    },
+    "whoAreWe": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.who-are-we"
+    },
+    "Industries": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.industries"
+    },
+    "industriesCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cards.card"
     }
   }
 }

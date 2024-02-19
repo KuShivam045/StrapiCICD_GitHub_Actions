@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_section_who_are_wes",
+  "info": {
+    "displayName": "whoAreWe",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "subHeading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

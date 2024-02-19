@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "xxxes",
+  "info": {
+    "singularName": "xxx",
+    "pluralName": "xxxes",
+    "displayName": "xxx"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}
