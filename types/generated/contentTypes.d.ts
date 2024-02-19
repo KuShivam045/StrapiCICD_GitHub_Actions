@@ -821,8 +821,9 @@ export interface ApiPagePage extends Schema.CollectionType {
     heroSection: Attribute.Component<'section.hero-section', true>;
     whoAreWe: Attribute.Component<'section.who-are-we'>;
     Industries: Attribute.Component<'section.industries'>;
-    industriesCards: Attribute.Component<'cards.card', true>;
     joinOurTeam: Attribute.Component<'section.join-our-team'>;
+    ourValues: Attribute.Component<'section.our-values'>;
+    newHeroCards: Attribute.Component<'cards.card', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

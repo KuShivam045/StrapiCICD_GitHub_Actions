@@ -30,6 +30,18 @@ export interface CardsCard extends Schema.Component {
   };
 }
 
+export interface CardsIndustryCards extends Schema.Component {
+  collectionName: 'components_cards_industry_cards';
+  info: {
+    displayName: 'industryCards';
+    icon: 'briefcase';
+  };
+  attributes: {
+    heading: Attribute.Text;
+    description: Attribute.Text;
+  };
+}
+
 export interface ContentDescription extends Schema.Component {
   collectionName: 'components_content_descriptions';
   info: {
@@ -124,11 +136,13 @@ export interface SectionIndustries extends Schema.Component {
   info: {
     displayName: 'Industries';
     icon: 'briefcase';
+    description: '';
   };
   attributes: {
     heading: Attribute.Text;
     subHeading: Attribute.Text;
     description: Attribute.Text;
+    industriesCards: Attribute.Component<'cards.industry-cards', true>;
   };
 }
 
@@ -158,6 +172,7 @@ export interface SectionOurValues extends Schema.Component {
     heading: Attribute.Text;
     ourValuesPoints: Attribute.Component<'content.our-values-points', true>;
     cta: Attribute.Text;
+    ourValuesImage: Attribute.Media;
   };
 }
 
@@ -179,6 +194,7 @@ declare module '@strapi/types' {
     export interface Components {
       'cards.blog-cards': CardsBlogCards;
       'cards.card': CardsCard;
+      'cards.industry-cards': CardsIndustryCards;
       'content.description': ContentDescription;
       'content.heading': ContentHeading;
       'content.our-values-points': ContentOurValuesPoints;

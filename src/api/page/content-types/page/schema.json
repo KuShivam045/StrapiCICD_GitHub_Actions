@@ -33,15 +33,20 @@
       "repeatable": false,
       "component": "section.industries"
     },
-    "industriesCards": {
-      "type": "component",
-      "repeatable": true,
-      "component": "cards.card"
-    },
     "joinOurTeam": {
       "type": "component",
       "repeatable": false,
       "component": "section.join-our-team"
+    },
+    "ourValues": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.our-values"
+    },
+    "newHeroCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cards.card"
     }
   }
 }

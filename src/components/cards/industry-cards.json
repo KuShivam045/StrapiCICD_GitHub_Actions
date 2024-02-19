@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_cards_industry_cards",
+  "info": {
+    "displayName": "industryCards",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
