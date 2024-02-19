@@ -180,8 +180,8 @@ export interface SectionOurValues extends Schema.Component {
   };
   attributes: {
     heading: Attribute.Text;
-    ourValuesPoints: Attribute.Component<'content.our-values-points', true>;
     cta: Attribute.Text;
+    ourValueImage: Attribute.Media;
   };
 }
 

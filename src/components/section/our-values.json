@@ -10,13 +10,18 @@
     "heading": {
       "type": "text"
     },
-    "ourValuesPoints": {
-      "type": "component",
-      "repeatable": true,
-      "component": "content.our-values-points"
-    },
     "cta": {
       "type": "text"
+    },
+    "ourValueImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
