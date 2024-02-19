@@ -75,6 +75,20 @@ export interface FeatureBoxImage extends Schema.Component {
   };
 }
 
+export interface SectionHeroSection extends Schema.Component {
+  collectionName: 'components_section_hero_sections';
+  info: {
+    displayName: 'heroSection';
+    icon: 'archive';
+  };
+  attributes: {
+    subTitle: Attribute.Text;
+    title: Attribute.Text;
+    cta: Attribute.String;
+    heroImage: Attribute.Media;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -84,6 +98,7 @@ declare module '@strapi/types' {
       'content.sub-heading': ContentSubHeading;
       'feature-box.feature-box': FeatureBoxFeatureBox;
       'feature-box.image': FeatureBoxImage;
+      'section.hero-section': SectionHeroSection;
     }
   }
 }

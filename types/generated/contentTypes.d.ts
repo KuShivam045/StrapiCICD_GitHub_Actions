@@ -384,7 +384,6 @@ export interface ApiPagePage extends Schema.CollectionType {
       ]
     >;
     heroCards: Attribute.DynamicZone<['cards.card']>;
-    New_Component: Attribute.Component<'cards.card'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

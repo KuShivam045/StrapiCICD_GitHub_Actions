@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_section_hero_sections",
+  "info": {
+    "displayName": "heroSection",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "subTitle": {
+      "type": "text"
+    },
+    "title": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "string"
+    },
+    "heroImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

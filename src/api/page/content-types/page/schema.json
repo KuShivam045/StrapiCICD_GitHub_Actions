@@ -27,11 +27,6 @@
       "components": [
         "cards.card"
       ]
-    },
-    "New_Component": {
-      "type": "component",
-      "repeatable": false,
-      "component": "cards.card"
     }
   }
 }
