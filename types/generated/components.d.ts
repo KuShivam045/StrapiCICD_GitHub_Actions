@@ -1,5 +1,20 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface CardsBlogCards extends Schema.Component {
+  collectionName: 'components_cards_blog_cards';
+  info: {
+    displayName: 'blogCards';
+    icon: 'bold';
+  };
+  attributes: {
+    blogImage: Attribute.Media;
+    blogTitle: Attribute.Text;
+    createdOn: Attribute.Date;
+    author: Attribute.Text;
+    authorImage: Attribute.Media;
+  };
+}
+
 export interface CardsCard extends Schema.Component {
   collectionName: 'components_cards_cards';
   info: {
@@ -117,6 +132,21 @@ export interface SectionIndustries extends Schema.Component {
   };
 }
 
+export interface SectionJoinOurTeam extends Schema.Component {
+  collectionName: 'components_section_join_our_teams';
+  info: {
+    displayName: 'joinOurTeam';
+    icon: 'cloud';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.Text;
+    subHeading: Attribute.Text;
+    joinOurTeamPoints: Attribute.Component<'content.heading', true>;
+    cta: Attribute.Text;
+  };
+}
+
 export interface SectionOurValues extends Schema.Component {
   collectionName: 'components_section_our_values';
   info: {
@@ -147,6 +177,7 @@ export interface SectionWhoAreWe extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'cards.blog-cards': CardsBlogCards;
       'cards.card': CardsCard;
       'content.description': ContentDescription;
       'content.heading': ContentHeading;
@@ -156,6 +187,7 @@ declare module '@strapi/types' {
       'feature-box.image': FeatureBoxImage;
       'section.hero-section': SectionHeroSection;
       'section.industries': SectionIndustries;
+      'section.join-our-team': SectionJoinOurTeam;
       'section.our-values': SectionOurValues;
       'section.who-are-we': SectionWhoAreWe;
     }

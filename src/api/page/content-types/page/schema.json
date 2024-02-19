@@ -37,6 +37,11 @@
       "type": "component",
       "repeatable": true,
       "component": "cards.card"
+    },
+    "joinOurTeam": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.join-our-team"
     }
   }
 }
