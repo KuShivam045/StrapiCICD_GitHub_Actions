@@ -12,21 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "heroSection": {
-      "type": "dynamiczone",
-      "components": [
-        "content.heading",
-        "content.sub-heading",
-        "content.description",
-        "feature-box.feature-box",
-        "feature-box.image"
-      ]
-    },
     "heroCards": {
       "type": "dynamiczone",
       "components": [
         "cards.card"
       ]
+    },
+    "heroSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section.hero-section"
     }
   }
 }

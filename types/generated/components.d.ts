@@ -5,11 +5,13 @@ export interface CardsCard extends Schema.Component {
   info: {
     displayName: 'card';
     icon: 'calendar';
+    description: '';
   };
   attributes: {
-    cardHeading: Attribute.Component<'content.heading', true>;
-    cardDescription: Attribute.Component<'content.description', true>;
-    cardCta: Attribute.Component<'feature-box.feature-box', true>;
+    cardHeading: Attribute.Component<'content.heading'>;
+    cardDescription: Attribute.Component<'content.description'>;
+    cardCta: Attribute.Component<'feature-box.feature-box'>;
+    cardSubheading: Attribute.Component<'content.sub-heading'>;
   };
 }
 
