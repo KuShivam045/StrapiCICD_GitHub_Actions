@@ -41,6 +41,11 @@
       "type": "component",
       "repeatable": true,
       "component": "cards.hero-card"
+    },
+    "ourValuesPoint_369": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.our-values-points"
     }
   }
 }

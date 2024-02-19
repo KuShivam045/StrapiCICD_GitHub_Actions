@@ -2,7 +2,8 @@
   "collectionName": "components_content_our_values_points",
   "info": {
     "displayName": "ourValuesPoints",
-    "icon": "filter"
+    "icon": "filter",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,14 +14,15 @@
       "type": "text"
     },
     "ourValuesIcons": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

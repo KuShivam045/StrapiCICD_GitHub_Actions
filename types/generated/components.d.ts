@@ -82,6 +82,7 @@ export interface ContentOurValuesPoints extends Schema.Component {
   info: {
     displayName: 'ourValuesPoints';
     icon: 'filter';
+    description: '';
   };
   attributes: {
     heading: Attribute.Text;
@@ -181,7 +182,6 @@ export interface SectionOurValues extends Schema.Component {
     heading: Attribute.Text;
     ourValuesPoints: Attribute.Component<'content.our-values-points', true>;
     cta: Attribute.Text;
-    ourValuesImage: Attribute.Media;
   };
 }
 
