@@ -833,6 +833,37 @@ export interface ApiPagePage extends Schema.CollectionType {
   };
 }
 
+export interface ApiPaperPaper extends Schema.CollectionType {
+  collectionName: 'papers';
+  info: {
+    singularName: 'paper';
+    pluralName: 'papers';
+    displayName: 'paper';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    xxx: Attribute.Component<'section.who-are-we'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::paper.paper',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::paper.paper',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiXxxXxx extends Schema.SingleType {
   collectionName: 'xxxes';
   info: {
@@ -875,6 +906,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::blog.blog': ApiBlogBlog;
       'api::page.page': ApiPagePage;
+      'api::paper.paper': ApiPaperPaper;
       'api::xxx.xxx': ApiXxxXxx;
     }
   }
