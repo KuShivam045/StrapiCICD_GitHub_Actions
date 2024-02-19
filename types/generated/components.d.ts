@@ -22,11 +22,20 @@ export interface CardsCard extends Schema.Component {
     icon: 'calendar';
     description: '';
   };
+  attributes: {};
+}
+
+export interface CardsHeroCard extends Schema.Component {
+  collectionName: 'components_cards_hero_cards';
+  info: {
+    displayName: 'heroCard';
+    icon: 'alien';
+  };
   attributes: {
-    cardHeading: Attribute.Component<'content.heading'>;
-    cardDescription: Attribute.Component<'content.description'>;
-    cardCta: Attribute.Component<'feature-box.feature-box'>;
-    cardSubheading: Attribute.Component<'content.sub-heading'>;
+    heading: Attribute.Text;
+    subHeading: Attribute.Text;
+    description: Attribute.Text;
+    cta: Attribute.Text;
   };
 }
 
@@ -194,6 +203,7 @@ declare module '@strapi/types' {
     export interface Components {
       'cards.blog-cards': CardsBlogCards;
       'cards.card': CardsCard;
+      'cards.hero-card': CardsHeroCard;
       'cards.industry-cards': CardsIndustryCards;
       'content.description': ContentDescription;
       'content.heading': ContentHeading;

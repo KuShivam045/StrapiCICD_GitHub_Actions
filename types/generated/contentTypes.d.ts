@@ -823,7 +823,7 @@ export interface ApiPagePage extends Schema.CollectionType {
     Industries: Attribute.Component<'section.industries'>;
     joinOurTeam: Attribute.Component<'section.join-our-team'>;
     ourValues: Attribute.Component<'section.our-values'>;
-    newHeroCards: Attribute.Component<'cards.card', true>;
+    newHeroCards: Attribute.Component<'cards.hero-card', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

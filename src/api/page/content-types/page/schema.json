@@ -46,7 +46,7 @@
     "newHeroCards": {
       "type": "component",
       "repeatable": true,
-      "component": "cards.card"
+      "component": "cards.hero-card"
     }
   }
 }

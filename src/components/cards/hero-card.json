@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_cards_hero_cards",
+  "info": {
+    "displayName": "heroCard",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "subHeading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "text"
+    }
+  }
+}

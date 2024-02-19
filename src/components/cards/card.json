@@ -6,26 +6,5 @@
     "description": ""
   },
   "options": {},
-  "attributes": {
-    "cardHeading": {
-      "type": "component",
-      "repeatable": false,
-      "component": "content.heading"
-    },
-    "cardDescription": {
-      "type": "component",
-      "repeatable": false,
-      "component": "content.description"
-    },
-    "cardCta": {
-      "type": "component",
-      "repeatable": false,
-      "component": "feature-box.feature-box"
-    },
-    "cardSubheading": {
-      "type": "component",
-      "repeatable": false,
-      "component": "content.sub-heading"
-    }
-  }
+  "attributes": {}
 }
