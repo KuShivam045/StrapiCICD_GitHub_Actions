@@ -51,6 +51,50 @@ export interface CardsIndustryCards extends Schema.Component {
   };
 }
 
+export interface CardsOurPartners extends Schema.Component {
+  collectionName: 'components_cards_our_partners';
+  info: {
+    displayName: 'ourPartners';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    comment: Attribute.Text;
+    link: Attribute.Text;
+    linkUrl: Attribute.Text;
+    logo: Attribute.Media;
+  };
+}
+
+export interface CardsOurSuccessStoryCard extends Schema.Component {
+  collectionName: 'components_cards_our_success_story_cards';
+  info: {
+    displayName: 'ourSuccessStoryCard';
+    icon: 'command';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.Text;
+    comment: Attribute.Text;
+    name: Attribute.Text;
+    designation: Attribute.Text;
+    image: Attribute.Media;
+  };
+}
+
+export interface CardsOverviewCard extends Schema.Component {
+  collectionName: 'components_cards_overview_cards';
+  info: {
+    displayName: 'ourExpertiseCard';
+    icon: 'folder';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.Text;
+    description: Attribute.Text;
+    image: Attribute.Media;
+  };
+}
+
 export interface ContentDescription extends Schema.Component {
   collectionName: 'components_content_descriptions';
   info: {
@@ -185,6 +229,20 @@ export interface SectionOurValues extends Schema.Component {
   };
 }
 
+export interface SectionOverview extends Schema.Component {
+  collectionName: 'components_section_overviews';
+  info: {
+    displayName: 'overview';
+    icon: 'file';
+  };
+  attributes: {
+    heading: Attribute.Text;
+    subHeading: Attribute.Text;
+    description: Attribute.Text;
+    image: Attribute.Media;
+  };
+}
+
 export interface SectionWhoAreWe extends Schema.Component {
   collectionName: 'components_section_who_are_wes';
   info: {
@@ -205,6 +263,9 @@ declare module '@strapi/types' {
       'cards.card': CardsCard;
       'cards.hero-card': CardsHeroCard;
       'cards.industry-cards': CardsIndustryCards;
+      'cards.our-partners': CardsOurPartners;
+      'cards.our-success-story-card': CardsOurSuccessStoryCard;
+      'cards.overview-card': CardsOverviewCard;
       'content.description': ContentDescription;
       'content.heading': ContentHeading;
       'content.our-values-points': ContentOurValuesPoints;
@@ -215,6 +276,7 @@ declare module '@strapi/types' {
       'section.industries': SectionIndustries;
       'section.join-our-team': SectionJoinOurTeam;
       'section.our-values': SectionOurValues;
+      'section.overview': SectionOverview;
       'section.who-are-we': SectionWhoAreWe;
     }
   }
