@@ -49,7 +49,7 @@
     },
     "overview": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "section.overview"
     },
     "ourExpertiseCards": {

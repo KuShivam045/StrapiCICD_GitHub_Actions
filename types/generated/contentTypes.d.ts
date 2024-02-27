@@ -405,7 +405,7 @@ export interface ApiPagePage extends Schema.CollectionType {
     ourValues: Attribute.Component<'section.our-values'>;
     heroCards: Attribute.Component<'cards.hero-card', true>;
     ourValuesPoints: Attribute.Component<'content.our-values-points', true>;
-    overview: Attribute.Component<'section.overview'>;
+    overview: Attribute.Component<'section.overview', true>;
     ourExpertiseCards: Attribute.Component<'cards.overview-card', true>;
     ourPartner: Attribute.Component<'cards.our-partners', true>;
     ourSuccessStoryCard: Attribute.Component<
