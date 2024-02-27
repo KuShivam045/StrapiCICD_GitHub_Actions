@@ -362,70 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiBlogBlog extends Schema.CollectionType {
-  collectionName: 'blogs';
-  info: {
-    singularName: 'blog';
-    pluralName: 'blogs';
-    displayName: 'Blog';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.Text;
-    blogsCards: Attribute.Component<'cards.blog-cards', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiPagePage extends Schema.CollectionType {
-  collectionName: 'pages';
-  info: {
-    singularName: 'page';
-    pluralName: 'pages';
-    displayName: 'page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    heroSection: Attribute.Component<'section.hero-section', true>;
-    whoAreWe: Attribute.Component<'section.who-are-we'>;
-    Industries: Attribute.Component<'section.industries'>;
-    joinOurTeam: Attribute.Component<'section.join-our-team'>;
-    ourValues: Attribute.Component<'section.our-values'>;
-    heroCards: Attribute.Component<'cards.hero-card', true>;
-    ourValuesPoints: Attribute.Component<'content.our-values-points', true>;
-    overview: Attribute.Component<'section.overview', true>;
-    ourExpertiseCards: Attribute.Component<'cards.overview-card', true>;
-    ourPartner: Attribute.Component<'cards.our-partners', true>;
-    ourSuccessStoryCard: Attribute.Component<
-      'cards.our-success-story-card',
-      true
-    >;
-    serviceAndSolutionCard: Attribute.Component<
-      'cards.service-and-solution-card',
-      true
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -845,6 +781,146 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlogBlog extends Schema.CollectionType {
+  collectionName: 'blogs';
+  info: {
+    singularName: 'blog';
+    pluralName: 'blogs';
+    displayName: 'Blog';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.Text;
+    blogsCards: Attribute.Component<'cards.blog-cards', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::blog.blog', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageHomePage extends Schema.CollectionType {
+  collectionName: 'home_pages';
+  info: {
+    singularName: 'home-page';
+    pluralName: 'home-pages';
+    displayName: 'home-page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heroSection: Attribute.Component<'section.hero-section', true>;
+    heroCards: Attribute.Component<'cards.hero-card', true>;
+    whoAreWe: Attribute.Component<'section.who-are-we'>;
+    Industries: Attribute.Component<'section.industries'>;
+    joinOurTeam: Attribute.Component<'section.join-our-team'>;
+    ourValues: Attribute.Component<'section.our-values'>;
+    ourValuesPoints: Attribute.Component<'content.our-values-points', true>;
+    ourExpertiseCards: Attribute.Component<'cards.overview-card', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPagePage extends Schema.CollectionType {
+  collectionName: 'pages';
+  info: {
+    singularName: 'page';
+    pluralName: 'pages';
+    displayName: 'page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heroSection: Attribute.Component<'section.hero-section', true>;
+    whoAreWe: Attribute.Component<'section.who-are-we'>;
+    Industries: Attribute.Component<'section.industries'>;
+    joinOurTeam: Attribute.Component<'section.join-our-team'>;
+    ourValues: Attribute.Component<'section.our-values'>;
+    heroCards: Attribute.Component<'cards.hero-card', true>;
+    ourValuesPoints: Attribute.Component<'content.our-values-points', true>;
+    overview: Attribute.Component<'section.overview', true>;
+    ourExpertiseCards: Attribute.Component<'cards.overview-card', true>;
+    ourPartner: Attribute.Component<'cards.our-partners', true>;
+    ourSuccessStoryCard: Attribute.Component<
+      'cards.our-success-story-card',
+      true
+    >;
+    serviceAndSolutionCard: Attribute.Component<
+      'cards.service-and-solution-card',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPartneshipPagePartneshipPage extends Schema.CollectionType {
+  collectionName: 'partneship_pages';
+  info: {
+    singularName: 'partneship-page';
+    pluralName: 'partneship-pages';
+    displayName: 'partnership-page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heroSection: Attribute.Component<'section.hero-section', true>;
+    overview: Attribute.Component<'section.overview'>;
+    ourExpertiseCards: Attribute.Component<'cards.overview-card', true>;
+    ourPartner: Attribute.Component<'cards.our-partners', true>;
+    ourSuccessStoryCard: Attribute.Component<
+      'cards.our-success-story-card',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::partneship-page.partneship-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::partneship-page.partneship-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -855,8 +931,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::blog.blog': ApiBlogBlog;
-      'api::page.page': ApiPagePage;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -865,6 +939,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::blog.blog': ApiBlogBlog;
+      'api::home-page.home-page': ApiHomePageHomePage;
+      'api::page.page': ApiPagePage;
+      'api::partneship-page.partneship-page': ApiPartneshipPagePartneshipPage;
     }
   }
 }
