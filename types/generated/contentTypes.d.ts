@@ -412,6 +412,10 @@ export interface ApiPagePage extends Schema.CollectionType {
       'cards.our-success-story-card',
       true
     >;
+    serviceAndSolutionCard: Attribute.Component<
+      'cards.service-and-solution-card',
+      true
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

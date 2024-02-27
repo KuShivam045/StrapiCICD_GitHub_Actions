@@ -95,6 +95,20 @@ export interface CardsOverviewCard extends Schema.Component {
   };
 }
 
+export interface CardsServiceAndSolutionCard extends Schema.Component {
+  collectionName: 'components_cards_service_and_solution_cards';
+  info: {
+    displayName: 'serviceAndSolutionCard';
+    icon: 'cast';
+  };
+  attributes: {
+    heading: Attribute.Text;
+    subHeading: Attribute.Text;
+    description: Attribute.Text;
+    image: Attribute.Media;
+  };
+}
+
 export interface ContentDescription extends Schema.Component {
   collectionName: 'components_content_descriptions';
   info: {
@@ -266,6 +280,7 @@ declare module '@strapi/types' {
       'cards.our-partners': CardsOurPartners;
       'cards.our-success-story-card': CardsOurSuccessStoryCard;
       'cards.overview-card': CardsOverviewCard;
+      'cards.service-and-solution-card': CardsServiceAndSolutionCard;
       'content.description': ContentDescription;
       'content.heading': ContentHeading;
       'content.our-values-points': ContentOurValuesPoints;

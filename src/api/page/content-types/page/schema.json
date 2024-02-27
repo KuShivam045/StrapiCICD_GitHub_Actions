@@ -66,6 +66,11 @@
       "type": "component",
       "repeatable": true,
       "component": "cards.our-success-story-card"
+    },
+    "serviceAndSolutionCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cards.service-and-solution-card"
     }
   }
 }
