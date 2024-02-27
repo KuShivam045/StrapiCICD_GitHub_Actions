@@ -921,6 +921,43 @@ export interface ApiPartneshipPagePartneshipPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiServiceSolutionsPageServiceSolutionsPage
+  extends Schema.CollectionType {
+  collectionName: 'service_solutions_pages';
+  info: {
+    singularName: 'service-solutions-page';
+    pluralName: 'service-solutions-pages';
+    displayName: 'service-solutions-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heroSection: Attribute.Component<'section.hero-section', true>;
+    overview: Attribute.Component<'section.overview', true>;
+    ourExpertiseCards: Attribute.Component<'cards.overview-card', true>;
+    serviceAndSolutionCard: Attribute.Component<
+      'cards.service-and-solution-card',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service-solutions-page.service-solutions-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service-solutions-page.service-solutions-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -943,6 +980,7 @@ declare module '@strapi/types' {
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::page.page': ApiPagePage;
       'api::partneship-page.partneship-page': ApiPartneshipPagePartneshipPage;
+      'api::service-solutions-page.service-solutions-page': ApiServiceSolutionsPageServiceSolutionsPage;
     }
   }
 }
