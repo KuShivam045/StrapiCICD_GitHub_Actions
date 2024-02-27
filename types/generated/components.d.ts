@@ -190,12 +190,14 @@ export interface SectionHeroSection extends Schema.Component {
   info: {
     displayName: 'heroSection';
     icon: 'archive';
+    description: '';
   };
   attributes: {
     subTitle: Attribute.Text;
     title: Attribute.Text;
     cta: Attribute.String;
     heroImage: Attribute.Media;
+    cta2: Attribute.Text;
   };
 }
 
