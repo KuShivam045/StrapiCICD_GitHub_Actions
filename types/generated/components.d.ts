@@ -229,6 +229,7 @@ export interface SectionJoinOurTeam extends Schema.Component {
     subHeading: Attribute.Text;
     joinOurTeamPoints: Attribute.Component<'content.heading', true>;
     cta: Attribute.Text;
+    image: Attribute.Media;
   };
 }
 
