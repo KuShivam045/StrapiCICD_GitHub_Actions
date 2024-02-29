@@ -25,6 +25,19 @@ export interface CardsCard extends Schema.Component {
   attributes: {};
 }
 
+export interface CardsCareerCards extends Schema.Component {
+  collectionName: 'components_cards_career_cards';
+  info: {
+    displayName: 'career-cards';
+    icon: 'book';
+  };
+  attributes: {
+    heading: Attribute.Text;
+    description: Attribute.Text;
+    icon: Attribute.Media;
+  };
+}
+
 export interface CardsHeroCard extends Schema.Component {
   collectionName: 'components_cards_hero_cards';
   info: {
@@ -282,6 +295,7 @@ declare module '@strapi/types' {
     export interface Components {
       'cards.blog-cards': CardsBlogCards;
       'cards.card': CardsCard;
+      'cards.career-cards': CardsCareerCards;
       'cards.hero-card': CardsHeroCard;
       'cards.industry-cards': CardsIndustryCards;
       'cards.our-partners': CardsOurPartners;
