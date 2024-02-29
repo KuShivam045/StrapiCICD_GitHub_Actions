@@ -213,6 +213,7 @@ export interface SectionIndustries extends Schema.Component {
     subHeading: Attribute.Text;
     description: Attribute.Text;
     industriesCards: Attribute.Component<'cards.industry-cards', true>;
+    image: Attribute.Media;
   };
 }
 
@@ -264,11 +265,13 @@ export interface SectionWhoAreWe extends Schema.Component {
   info: {
     displayName: 'whoAreWe';
     icon: 'book';
+    description: '';
   };
   attributes: {
     heading: Attribute.Text;
     subHeading: Attribute.Text;
     description: Attribute.Text;
+    image: Attribute.Media;
   };
 }
 
