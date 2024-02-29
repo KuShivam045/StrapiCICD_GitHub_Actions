@@ -198,6 +198,7 @@ export interface SectionHeroSection extends Schema.Component {
     cta: Attribute.String;
     heroImage: Attribute.Media;
     cta2: Attribute.Text;
+    mobileHeroImage: Attribute.Media;
   };
 }
 
