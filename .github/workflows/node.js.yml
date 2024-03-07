@@ -8,6 +8,17 @@ on:
     branches: [ "main" ]
 
 jobs:
+
+  backup:
+
+    runs-on: self-hosted
+    needs: build
+
+    steps:
+    - name: Backup directory
+      run: |
+        cp -nrv ~/action-runner/_work/strapicicd/strapicicd/public/uploads ~/strapi/
+
   build:
 
     runs-on: self-hosted
@@ -31,5 +42,16 @@ jobs:
     # - run: npm run develop
     - run: npm run build
     - run: pm2 restart 10
+
+    backup:
+
+    runs-on: self-hosted
+    needs: build
+
+    steps:
+    - name: Backup directory
+      run: |
+        cp -nrv ~/strapi/uploads ~/action-runner/_work/strapicicd/strapicicd/public/uploads 
+
 
     
