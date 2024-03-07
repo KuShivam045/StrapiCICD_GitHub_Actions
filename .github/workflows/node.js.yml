@@ -43,7 +43,7 @@ jobs:
     - run: npm run build
     - run: pm2 restart 10
 
-    backup:
+  backup:
 
     runs-on: self-hosted
     needs: build
