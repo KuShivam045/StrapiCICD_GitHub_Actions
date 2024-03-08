@@ -1,6 +1,3 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: Node.js CI/CD
 
 on:
@@ -9,19 +6,18 @@ on:
 
 jobs:
 
-  backup:
-
+  backup2:
     runs-on: self-hosted
-    needs: build
-
+    
     steps:
     - name: Backup directory
       run: |
-        cp -nrv /home/ubuntu/actions-runner-Strapi/_work/StrapiCICD/StrapiCICD/public ~/strapi/
+        cp -nrv /home/ubuntu/actions-runner-Strapi/_work/StrapiCICD/StrapiCICD/public/uploads/ ~/strapi/
 
   build:
 
     runs-on: self-hosted
+    needs: [backup1, backup2]
 
     strategy:
       matrix:
@@ -42,12 +38,13 @@ jobs:
     # - run: npm run develop
     - run: npm run build
     - run: pm2 restart 10
-
+  
+  
   backup1:
     runs-on: self-hosted
-    needs: build
-
+    
     steps:
     - name: Backup directory
       run: |
-        cp -nrv /home/ubuntu/strapi/uploads /home/ubuntu/actions-runner-Strapi/_work/StrapiCICD/StrapiCICD/public
+        cp -nrv /home/ubuntu/strapi/uploads /home/ubuntu/actions-runner-Strapi/_work/StrapiCICD/StrapiCICD/public/
+  
