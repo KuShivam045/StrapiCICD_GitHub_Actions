@@ -173,6 +173,20 @@ export interface ContentSubHeading extends Schema.Component {
   };
 }
 
+export interface ExpertiseCardExpertiseCard extends Schema.Component {
+  collectionName: 'components_expertise_card_expertise_cards';
+  info: {
+    displayName: 'ExpertiseCard';
+    icon: 'apps';
+  };
+  attributes: {
+    title: Attribute.String;
+    subTitle: Attribute.String;
+    cta: Attribute.String;
+    image: Attribute.Media;
+  };
+}
+
 export interface FeatureBoxFeatureBox extends Schema.Component {
   collectionName: 'components_feature_box_feature_boxes';
   info: {
@@ -306,6 +320,7 @@ declare module '@strapi/types' {
       'content.heading': ContentHeading;
       'content.our-values-points': ContentOurValuesPoints;
       'content.sub-heading': ContentSubHeading;
+      'expertise-card.expertise-card': ExpertiseCardExpertiseCard;
       'feature-box.feature-box': FeatureBoxFeatureBox;
       'feature-box.image': FeatureBoxImage;
       'section.hero-section': SectionHeroSection;

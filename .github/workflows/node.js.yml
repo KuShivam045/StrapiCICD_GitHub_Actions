@@ -9,6 +9,16 @@ on:
 
 jobs:
 
+  backup:
+
+    runs-on: self-hosted
+    needs: build
+
+    steps:
+    - name: Backup directory
+      run: |
+        cp -nrv /home/ubuntu/actions-runner-Strapi/_work/StrapiCICD/StrapiCICD/public/uploads/ ~/strapi/
+
   build:
 
     runs-on: self-hosted
