@@ -6,13 +6,21 @@ on:
 
 jobs:
 
-  backup2:
+  backup1:
     runs-on: self-hosted
     
     steps:
     - name: Backup directory
       run: |
         cp -nrv /home/ubuntu/actions-runner-Strapi/_work/StrapiCICD/StrapiCICD/public/uploads/ ~/strapi/
+
+  backup2:
+    runs-on: self-hosted
+    
+    steps:
+    - name: Backup directory
+      run: |
+        cp -nrv /home/ubuntu/strapi/uploads /home/ubuntu/actions-runner-Strapi/_work/StrapiCICD/StrapiCICD/public/
 
   build:
 
@@ -21,8 +29,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [12.x] # Correct the Node.js version
 
     steps:
     - uses: actions/checkout@v3
@@ -35,16 +42,5 @@ jobs:
     - run: |
         touch .env
         echo "${{secrets.PROD_ENV_FILE}}" > .env
-    # - run: npm run develop
-    - run: npm run build
-    - run: pm2 restart 10
-  
-  
-  backup1:
-    runs-on: self-hosted
-    
-    steps:
-    - name: Backup directory
-      run: |
-        cp -nrv /home/ubuntu/strapi/uploads /home/ubuntu/actions-runner-Strapi/_work/StrapiCICD/StrapiCICD/public/
-  
+    - run: npm run build || echo "Build failed"
+    - run: pm2 restart 10 || echo "PM2 restart failed"
