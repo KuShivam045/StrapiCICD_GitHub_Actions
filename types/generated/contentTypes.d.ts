@@ -990,6 +990,41 @@ export interface ApiPartneshipPagePartneshipPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiSaasPageSaasPage extends Schema.CollectionType {
+  collectionName: 'saas_pages';
+  info: {
+    singularName: 'saas-page';
+    pluralName: 'saas-pages';
+    displayName: 'Saas-page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    SaasHeroSection: Attribute.Component<'section.hero-section'>;
+    Saas: Attribute.Component<'section.overview'>;
+    ourExpertise: Attribute.Component<'section.overview'>;
+    whyUs: Attribute.Component<'section.industries'>;
+    ourSaasProduct: Attribute.Component<'cards.hero-card'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::saas-page.saas-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::saas-page.saas-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiServiceSolutionsPageServiceSolutionsPage
   extends Schema.CollectionType {
   collectionName: 'service_solutions_pages';
@@ -1051,6 +1086,7 @@ declare module '@strapi/types' {
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::page.page': ApiPagePage;
       'api::partneship-page.partneship-page': ApiPartneshipPagePartneshipPage;
+      'api::saas-page.saas-page': ApiSaasPageSaasPage;
       'api::service-solutions-page.service-solutions-page': ApiServiceSolutionsPageServiceSolutionsPage;
     }
   }

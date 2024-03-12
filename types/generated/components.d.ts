@@ -43,12 +43,14 @@ export interface CardsHeroCard extends Schema.Component {
   info: {
     displayName: 'heroCard';
     icon: 'alien';
+    description: '';
   };
   attributes: {
     heading: Attribute.Text;
     subHeading: Attribute.Text;
     description: Attribute.Text;
     cta: Attribute.Text;
+    ourSaasProductCards: Attribute.Component<'section.our-values', true>;
   };
 }
 
@@ -57,10 +59,12 @@ export interface CardsIndustryCards extends Schema.Component {
   info: {
     displayName: 'industryCards';
     icon: 'briefcase';
+    description: '';
   };
   attributes: {
     heading: Attribute.Text;
     description: Attribute.Text;
+    image: Attribute.Media;
   };
 }
 
@@ -272,6 +276,7 @@ export interface SectionOurValues extends Schema.Component {
     heading: Attribute.Text;
     cta: Attribute.Text;
     ourValueImage: Attribute.Media;
+    description: Attribute.Text;
   };
 }
 
