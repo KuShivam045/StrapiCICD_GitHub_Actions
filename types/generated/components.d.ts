@@ -277,6 +277,7 @@ export interface SectionOurValues extends Schema.Component {
     cta: Attribute.Text;
     ourValueImage: Attribute.Media;
     description: Attribute.Text;
+    productLogo: Attribute.Media;
   };
 }
 

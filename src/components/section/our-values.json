@@ -26,6 +26,16 @@
     },
     "description": {
       "type": "text"
+    },
+    "productLogo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
