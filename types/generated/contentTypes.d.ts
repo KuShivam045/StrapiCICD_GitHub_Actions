@@ -874,6 +874,42 @@ export interface ApiCareerPageCareerPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiContactUsFormContactUsForm extends Schema.CollectionType {
+  collectionName: 'contact_us_forms';
+  info: {
+    singularName: 'contact-us-form';
+    pluralName: 'contact-us-forms';
+    displayName: 'contactUs-Form';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    FirstName: Attribute.String & Attribute.Required;
+    LastName: Attribute.String & Attribute.Required;
+    Email: Attribute.Email & Attribute.Required;
+    Mobile: Attribute.BigInteger;
+    Subject: Attribute.String;
+    Message: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-us-form.contact-us-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-us-form.contact-us-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomePageHomePage extends Schema.CollectionType {
   collectionName: 'home_pages';
   info: {
@@ -1083,6 +1119,7 @@ declare module '@strapi/types' {
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::blog.blog': ApiBlogBlog;
       'api::career-page.career-page': ApiCareerPageCareerPage;
+      'api::contact-us-form.contact-us-form': ApiContactUsFormContactUsForm;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::page.page': ApiPagePage;
       'api::partneship-page.partneship-page': ApiPartneshipPagePartneshipPage;
