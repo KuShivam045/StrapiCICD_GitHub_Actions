@@ -10,14 +10,14 @@ This project automates the deployment of a Strapi application using GitHub Actio
   - `PROD_ENV_FILE`: The content of your production `.env` file.
 
 ## Workflow Steps
-- **Backup: Copies the uploads directory to a backup location.
-- **Build: Performs the following steps:
-- **Checkout: Checks out the latest code from the main branch.
-- **Setup Node.js: Uses the specified Node.js version.
-- **Install dependencies: Installs project dependencies.
-- **Create .env file: Creates the .env file using the secret.
-- **Build project: Builds the Strapi project.
-- **Restart server: Restarts the server using PM2.
+- Backup: Copies the uploads directory to a backup location.
+- Build: Performs the following steps:
+- Checkout: Checks out the latest code from the main branch.
+- Setup Node.js: Uses the specified Node.js version.
+- Install dependencies: Installs project dependencies.
+- Create .env file: Creates the .env file using the secret.
+- Build project: Builds the Strapi project.
+- Restart server: Restarts the server using PM2.
 
 
 
